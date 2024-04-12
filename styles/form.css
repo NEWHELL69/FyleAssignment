@@ -1,0 +1,142 @@
+/* I am using CUBE css by piccali -> cube.fyi */
+
+body {
+    position: relative;
+}
+
+/* Composition */
+body > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 1em;
+}
+
+#taxForm {
+    font-size: 1.5em;
+    width: 100vw;
+}
+
+@media (min-width: 576px) {
+    #taxForm {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 768px) {
+    #taxForm {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 992px) {
+    #taxForm {
+        width: 35vw;
+    }
+}
+
+#taxForm label {
+    display: block;
+}
+
+/* input Field block */
+.inputFieldBlock .labelGrp {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.inputFieldBlock .labelGrp span {
+    font-size: 0.8em;
+}
+
+.inputFieldBlock .labelGrp .icon {
+    height: 1em;
+    width: 1em;
+}
+
+.inputFieldBlock .inputGrp {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.inputFieldBlock .inputGrp .icon {
+    position: relative;
+    height: 1em;
+    width: 1em;
+    left: -12%;
+}
+
+.inputFieldBlock input {
+    width: 100%;
+    font-size: 0.8em;
+}
+
+/* Select Field Block */
+.selectFieldBlock .labelGrp {
+    display: flex;
+    gap: 0.2em;
+}
+
+.selectFieldBlock .labelGrp span {
+    font-size: 0.8em;
+}
+
+.selectFieldBlock .labelGrp .icon {
+    width: 1em;
+    height: 1em;
+}
+
+.selectFieldBlock select {
+    width: calc(100% - 1em);
+    font-size: 0.8em;
+}
+
+/* error tool tip */
+#taxForm .errorIcon:has(> [role="tooltip"].active) {
+    z-index: 1;
+}
+
+#taxForm .errorToolTip {
+    visibility: hidden;
+}
+
+#taxForm .errorToolTip.active {
+    visibility: visible;
+}
+
+/* tax form submit btn */
+#taxForm button {
+    margin-top: 2em;
+    width: calc(100% - 1em);
+}
+
+
+/* Modal */
+#result {
+    text-align: center;
+    padding: 2em;
+}
+
+#result > p {
+    margin-bottom: 3em;
+}
+
+#resultLine1 {
+    font-size: 3em;
+}
+
+#resultValue {
+    font-size: 1.5em;
+}
+
+#resultLine2 {
+    font-size: 2em;
+}
+
+#resultCloseBtn {
+    height: 2em;
+    width: 6em;
+}

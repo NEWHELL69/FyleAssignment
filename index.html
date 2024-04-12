@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tax Calculator</title>
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/tooltip.css">
+        <link rel="stylesheet" href="./styles/form.css">
+        <link rel="stylesheet" href="./styles/icons.css">
+        <link rel="stylesheet" href="./styles/utility.css">
+    </head>
+    <body class="sansFont">
+        <div>
+            <main>
+                <form id="taxForm" class="flow">
+                    <label class="inputFieldBlock">
+                        <div class="labelGrp">
+                            <span>Gross Annual Income</span>
+                            <div data-tooltip="Gross annual income is your total salary in a year before any deductions" class="icon helpIcon"></div>
+                        </div>
+                        <div class="inputGrp">
+                            <input placeholder="Enter gross annual income" type="text" id="incomeField" name="income">
+                            <div data-tooltip="" id="incomeFieldError" class="icon errorIcon errorToolTip"></div>
+                        </div>
+                    </label>
+                    <label class="inputFieldBlock">
+                        <div class="labelGrp">
+                            <span>Extra Income</span>
+                            <div data-tooltip="Additional income beyond regular earnings." class="icon helpIcon"></div>
+                        </div>
+                        <div class="inputGrp">
+                            <input placeholder="Enter extra income from other sources" type="text" id="extraIncomeField" name="extraIncome">
+                            <div data-tooltip="" id="extraIncomeFieldError" class="icon errorIcon errorToolTip"></div>
+                        </div>
+                    </label>
+                    <label class="selectFieldBlock">
+                        <div class="labelGrp">
+                            <span>Age</span>
+                            <div data-tooltip="our current age, affecting tax rates." class="icon helpIcon"></div>
+                            <div data-tooltip="" id="ageFieldError" class="icon errorIcon errorToolTip"></div>
+                        </div>
+                        <select id="age" name="age">
+                            <option value="" selected disabled hidden></option>
+                            <option value="<40">&lt;40</option>
+                            <option value="40-60">&ge; 40 &amp; &lt; 60</option>
+                            <option value=">=60">&ge; 60</option>
+                        </select>
+                    </label>
+                    <label class="inputFieldBlock">
+                        <div class="labelGrp">
+                            <span>Deductions</span>
+                            <div data-tooltip="Eligible expenses subtracted from income." class="icon helpIcon"></div>
+                        </div>
+                        <div class="inputGrp">
+                            <input placeholder="Add total applicable deductions" type="text" id="deductionsField" name="deductions">
+                            <div data-tooltip="" id="deductionsFieldError" class="icon errorIcon errorToolTip"></div>
+                        </div>
+                    </label>
+                    <button type="submit">Calculate Tax</button>
+                </form>
+                <dialog id="result">
+                    <p>
+                        <span id="resultLine1">Your overall income will be</span>
+                        <br>
+                        <span id="resultValue"></span>
+                        <br>
+                        <span id="resultLine2">after tax deductions</span>
+                    </p>
+                    <button type="button" id="resultCloseBtn">Close</button>
+                </dialog>
+            </main>
+        </div>
+        <script src="./scripts/saveChanges.js"></script>
+        <script src="./scripts/tooltip.js"></script>
+        <script src="./scripts/formSubmit.js"></script>
+    </body>
+</html>

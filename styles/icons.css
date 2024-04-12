@@ -1,0 +1,13 @@
+.errorIcon {
+    display: inline-block;
+    background-image: url('../media/icons/error.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.helpIcon {
+    display: inline-block;
+    background-image: url('../media/icons/help.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
